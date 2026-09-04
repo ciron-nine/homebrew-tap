@@ -14,18 +14,11 @@ DMG 直接下载自腾讯云官方 COS 源，已验证腾讯
 `Developer ID Application: Tencent Technology (Shanghai) Company Limited`
 签名并通过 Apple 公证（Notarized）。
 
-> 注意：腾讯目前只提供固定文件名的 latest 下载链接，本 cask 通过
-> sha256 锁定当前版本（1.4.9）。腾讯发布新版后需要更新本 tap 才能升级。
+## 版本说明
 
-## 腾讯发新版后如何更新
+腾讯只提供固定文件名的 `latest` 下载链接（内容随版本更新被覆盖），
+因此本 cask 使用 `version :latest` + `sha256 :no_check`：
 
-```bash
-git clone https://github.com/ciron-nine/homebrew-tap
-cd homebrew-tap
-./bin/update-orcaterm.sh --push   # 自动下载最新 DMG、提取版本和 sha256、提交并推送
-```
-
-用户侧随后 `brew upgrade --cask orcaterm` 即可（brew 安装的版本支持直接覆盖升级）。
-
-> 如果安装时报 "It seems there is already an App at '/Applications/OrcaTerm.app'"，
-> 说明装的是非 brew 版本，先手动移走该 app 再安装。
+- `brew install` 每次都会下载当时 CDN 上的最新版
+- 重新安装最新版：`brew reinstall --cask ciron-nine/tap/orcaterm`
+- app 内置腾讯官方自动更新器，日常新版本由腾讯直接推送，无需 brew 操作
