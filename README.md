@@ -1,18 +1,18 @@
-# Ghost Tap
+# ciron-nine/tap
 
-## How do I install these formulae?
+Personal Homebrew tap.
 
-`brew install ghost/tap/<formula>`
+## Install OrcaTerm (Tencent Cloud 智能终端)
 
-Or `brew tap ghost/tap` and then `brew install <formula>`.
-
-Or, in a `brew bundle` `Brewfile`:
-
-```ruby
-tap "ghost/tap"
-brew "<formula>"
+```bash
+brew tap ciron-nine/tap
+brew install --cask ciron-nine/tap/orcaterm
 ```
 
-## Documentation
+OrcaTerm 是腾讯云官方的 SSH/SFTP/RDP 终端客户端（Tauri 构建）。
+DMG 直接下载自腾讯云官方 COS 源，已验证腾讯
+`Developer ID Application: Tencent Technology (Shanghai) Company Limited`
+签名并通过 Apple 公证（Notarized）。
 
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+> 注意：腾讯目前只提供固定文件名的 latest 下载链接，本 cask 通过
+> sha256 锁定当前版本（1.4.9）。腾讯发布新版后需要更新本 tap 才能升级。
