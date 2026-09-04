@@ -1,6 +1,6 @@
 cask "orcaterm" do
-  version "1.4.9"
-  sha256 "680452b12a7b3d875fe63e40cf68bca1d1b7be9bf3b1984d2cfe6ed6ab35f69e"
+  version "1.5.0"
+  sha256 "a5f0ad5b5cc7ad104b04264c35babba2793abb6214e58bba28b20ed682484d97"
 
   url "https://orcaterm-desktop-1258344699.cos.ap-guangzhou.myqcloud.com/release/archive/v#{version}/OrcaTerm-#{version}-mac-universal.dmg",
       verified: "orcaterm-desktop-1258344699.cos.ap-guangzhou.myqcloud.com/release/archive/"
